@@ -1,0 +1,7 @@
+<h1>{{number | percent}}</h1>
+<input [(ngModel)]="name" type="text">
+<button (click)="increaseNumber()" >Click</button>
+
+<span *ngIf="number % 2 === 0; then showEven;else showName " ></span>
+<ng-template #showEven >{{number}}</ng-template>
+<ng-template #showName >{{name | uppercase}}</ng-template>
